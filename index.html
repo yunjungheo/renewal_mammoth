@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- viewport 화면 스케일 조정 (기본에서 수정)-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Nanum Font Link -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+  <!-- Google Font Link -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap" rel="stylesheet">
+  <title id="text"></title>
+  <!-- Full Page Plugin Link -->
+  <link rel="stylesheet" href="fullpage_lib/jquery.fullpage.css">
+  <!-- Reset CSS Link -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!-- Main CSS Link -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Animation CSS Link -->
+  <link rel="stylesheet" href="css/animation.css">
+  <!-- Media Query CSS link -->
+  <link rel="stylesheet" href="css/media.css">
+
+
+  <!-- Title Typing Effect -->
+  <!-- 제목 시간차로 글자나누어서 나오는 효과  -->
+  <script>
+    const string = "MAMMOTH COFFEE";
+    const array = string.split('');
+    //console.log(array);
+    let timer;
+
+    function frameLooper(){
+      if(array.length > 0){
+        document.getElementById("text").innerHTML += array.shift();
+      }else{
+        clearTimeout(timer);
+      }
+
+      timer = setTimeout('frameLooper()',200);
+    }
+    frameLooper();
+    
+  </script>
+</head>
+<body>
+  <div class="wrap" id="fullpage">
+    <div class="overlay">
+
+    </div>
+    <!-- PC Frame Header and Navigation -->
+    <header class="header" id="header">
+      <div class="center">
+        <!-- Mobile Menu Icon -->
+        <div class="menu_icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <!-- Nobile Navigation -->
+        <nav class="mobile_nav">
+          <ul class="mobile_inner">
+            <li class="mobile_li">
+              <div class="mobile_logo_box">
+                <a href="#" class="mobile_logo"></a>
+              </div>
+              <div class="close_btn">
+                <span></span>
+                <span></span>
+              </div>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">ABOUT US</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">매머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">MENU - 매머드커피</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">전체메뉴</a></li>
+                <li class="mobile_sub_li"><a href="#">신제품</a></li>
+                <li class="mobile_sub_li"><a href="#">32oz</a></li>
+                <li class="mobile_sub_li"><a href="#">논커피</a></li>
+                <li class="mobile_sub_li"><a href="#">스무디</a></li>
+                <li class="mobile_sub_li"><a href="#">프라페/쉐이크</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">MENU - 매머드 익스프레스</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">매머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li class="mobile_li">
+              <a href="#" class="mobile_tit">STORE</a>
+              <ul class="mobile_sub_nav">
+                <li class="mobile_sub_li"><a href="#">매머드 커피</a></li>
+                <li class="mobile_sub_li"><a href="#">매머드 익스프레스</a></li>
+                <li class="mobile_sub_li"><a href="#">연혁</a></li>
+                <li class="mobile_sub_li"><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+          </ul>
+
+
+        </nav>
+
+        <!-- PC Navigation -->
+        <div class="logo">
+          <a href="" class="logo_link"></a>
+        </div>
+        <ul class="topnav">
+          <li><a href="#">about us</a></li>
+          <li><a href="#">menu</a></li>
+          <li><a href="#">store</a></li>
+          <li><a href="#">franshise</a></li>
+          <li><a href="#">customer</a></li>
+          <li><a href="#">event</a></li>
+        </ul>
+      </div>
+      <!-- Hidden Mega Box Menu -->
+      <div class="hidden_sub">
+        <div class="line"></div>
+        <div class="sub_nav">
+          <div class="subnav_box box_1">
+           <ul>
+             <li class="sub_nav_tit">메머드커피01</li>
+             <li><a href="#">메머드커피02</a></li>
+             <li><a href="#">메머드 익스프레스</a></li>
+             <li><a href="#">연혁</a></li>
+           </ul>
+          </div>
+          <div class="subnav_box box_2">
+            <ul>
+              <li class="sub_nav_tit">메머드커피03</li>
+              <li><a href="#">메머드커피04</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+            <ul>
+              <li class="sub_nav_tit">메머드커피05</li>
+              <li><a href="#">메머드커피06</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              
+            </ul>
+          </div>
+          <div class="subnav_box box_3">
+            <ul>
+              <li class="sub_nav_tit">메머드커피07</li>
+              <li><a href="#">메머드커피08</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_4">
+            <ul>
+              <li class="sub_nav_tit">메머드커피09</li>
+              <li><a href="#">메머드커피10</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_5">
+            <ul>
+              <li class="sub_nav_tit">메머드커피11</li>
+              <li><a href="#">메머드커피12</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+          <div class="subnav_box box_6">
+            <ul>
+              <li class="sub_nav_tit">메머드커피13</li>
+              <li><a href="#">메머드커피14</a></li>
+              <li><a href="#">메머드 익스프레스</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">연혁</a></li>
+            </ul>
+          </div>
+        
+        </div>
+        <!-- 원래는 nav안에 ul li 로 만들어줘야하지만 이방법은 메가박스에 나와서 위 리스트에 맞춰서 만들어준 방법-->
+      </div>
+      <!-- End of Center Tag -->
+
+
+    </header>
+    <!-- Page 1 Section -->
+    <section class="page_1 section" data-anchor="1st">
+      <div class="main_msg">
+        <div class="logo_box">
+          <img src="img/page01_logo.png" alt="">
+        </div>
+        <div class="main_txt">
+          <h2>맛, 멋 그리고 진심</h2>
+        </div>
+        <div class="btn_box">
+          <a href="">매머드 커피</a>
+          <a href="">매머드 익스프레스</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="page_2 section" data-anchor="2nd" style="background: thistle;">
+    </section>
+    <section class="page_3 section" data-anchor="3rd" style="background:teal">
+    </section>
+  </div>
+
+
+  <!-- JQuery Framework Load -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Full Page Plugin Link -->
+  <script src="fullpage_lib/jquery.fullpage.js"></script>
+  <script src="js/fullpage_code.js"></script>
+  <!-- Main JQuery file Load -->
+  <script src="js/jq.main.js"></script>
+
+</body>
+</html>

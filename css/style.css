@@ -1,0 +1,90 @@
+.center{width: 100%; height: auto; max-width: 1060px; margin: auto; position: relative;}
+
+.wrap{width: 100%; height: auto;}
+
+.overlay{position: fixed; width: 0; height: 100vh; left: 0; top: 0; background:#000;opacity: 0; z-index: 9999;}
+
+section{position: relative;}
+
+/* PC Frame Header Style Code */
+.header{position: fixed; width: 100%; height: 105px; top: 0; z-index: 999;}
+.header .center{height: 100%; display: flex;}
+
+/* Mobile Menu Icon Style Code */
+.header .menu_icon{width: 25px; height: 25px; cursor: pointer; position: absolute;left: 20px; top: 50%; transform: translateY(-50%);display: none;}
+.header .menu_icon span{width: 100%; height: 2px; background: #fff; display: block;}
+.header .menu_icon span:nth-child(2){margin: 8px 0;}
+
+.header .menu_icon.active span{animation: ico-ani 0.6s 1;animation-fill-mode: forwards;}
+.header .menu_icon.active span:nth-child(2){animation-delay:0.2s;}
+.header .menu_icon.active span:nth-child(3){animation-delay:0.4s;}
+
+
+/* Mobile Navigation Style Code */
+.header .mobile_nav{width: 60%; height: 100vh; background: #fff; position: fixed; left: -60%;}
+.header .mobile_inner{width: 100%; height: auto;}
+.header .mobile_inner .mobile_li{border: 1px solid #ccc;position: relative;}
+.header .mobile_inner .mobile_logo_box{width: 100%; display: flex; justify-content: center;padding: 10px 0;}
+.header .mobile_inner .mobile_logo_box .mobile_logo{display: block;width: 60px; height: 40px; background: url(../img/monav_logo.png) no-repeat center center;background: cover;}
+.header .mobile_inner .close_btn{position: absolute;width: 25px;height: 25px;right: 20px; cursor: pointer; top: 50%;display: flex;align-items: center;justify-content: center;transform: translateY(-50%) rotate(45deg);}
+.header .mobile_inner .close_btn span{display: block;background: #000;position: absolute;}
+.header .mobile_inner .close_btn span:nth-child(1){width: 100%; height: 2px;top: 50%;transform: translateY(-50%);}
+.header .mobile_inner .close_btn span:nth-child(2){width: 2px; height: 100%;left: 50%;transform: translateX(-50%);}
+
+.header .mobile_li .mobile_tit{display: block; padding: 15px; font-size: 16px; font-weight: bold; color: #000;position: relative;}
+.header .mobile_li .mobile_tit:before{content: '';display: block; width: 10px; height: 2px; background: #000;position: absolute; top: 50%;right: 27px;}
+.header .mobile_li .mobile_tit:after{content: '';display: block; width: 10px; height: 2px; background: #000;position: absolute; top: 50%;right: 27px;transform: rotate(90deg);}
+
+.header .mobile_li .mobile_tit.rotate:before{transform: rotate(45deg);}
+.header .mobile_li .mobile_tit.rotate:after{transform: rotate(135deg);}
+
+/* Mobile Sub Navigation Style Code */
+.header .mobile_sub_nav{width: 100%; height: auto; padding: 0 15px 15px 20px;display: none;}
+.header .mobile_sub_nav .mobile_sub_li{line-height: 25px;}
+.header .mobile_sub_nav .mobile_sub_li a{font-size: 14px; color: #000;}
+
+.header .logo{padding: 20px 0;display: flex;align-items: center;}
+.header .logo_link{width: 247px; height: 18px; background: url(../img/mmenu_logo.png)no-repeat center center; background-size: cover;}
+
+
+.header .topnav{height: 100%; text-align: center; display: flex;align-items: center;}
+.header .topnav li{ padding: 0 30px;}
+.header .topnav a{font-size: 17px; color:#fff; position: relative; display: block; font-weight: bold; text-transform: uppercase; padding-top: 5px;}
+.header .topnav a:after{content:''; position: absolute; display: block; width: 0; height: 3px; background: red; left: 0; right: 0; margin: auto; transition: all 0.4s; top: 61px;}
+/* width 를 0 으로 해놔야 없었다가 가로값이 생기기때문에?! */
+.header .topnav li:hover a:after{width: 100%;}
+
+
+/* Hidden Mega Box Style Code */
+.header .hidden_sub{width: 100%; background: #fff; position: fixed; top: 0; left: 0; display: none; height: 485px; z-index: -1;}
+.header .hidden_sub .line{width: 100%; border-top: 1px solid #b1b1b1;position: absolute; top: 105px;} 
+
+/* Hidden Mega Box Sub Menu Style Code */
+.header .hidden_sub .sub_nav{width: 1060px; margin: auto; position: relative; top: 105px;}
+.header .hidden_sub .subnav_box{position: absolute;}
+.header .hidden_sub .subnav_box ul{display: inline-block; vertical-align: text-top;}
+.header .hidden_sub .subnav_box ul .sub_nav_tit{font-weight: bold; margin-top: 20px;font-size: 14px; line-height: 30px;}
+.header .hidden_sub .subnav_box ul a{color: #000; display: block;width: 100%; height: 100%; line-height: 30px; font-size: 14px; transition: all 0.4s;}
+.header .hidden_sub .subnav_box ul a:hover{color: #d72329;}
+
+.header .hidden_sub .subnav_box.box_1{left: 280px;}
+.header .hidden_sub .subnav_box.box_2{left: 416px;}
+.header .hidden_sub .subnav_box.box_3{left: 529px;}
+.header .hidden_sub .subnav_box.box_4{left: 640px;}
+.header .hidden_sub .subnav_box.box_5{left: 790px;}
+.header .hidden_sub .subnav_box.box_6{left: 940px;}
+
+
+/* Page_1 Style */
+.page_1{background: url(../img/page_bg01.jpg) no-repeat center center; background-size: cover; width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;}
+.page_1 .main_msg{display: flex; flex-direction: column;align-items: center;}
+.page_1 .main_msg img{animation:logo 0.5s 1;}
+
+.page_1 .main_msg .main_txt{width:0%; padding: 30px 0;white-space: nowrap;overflow: hidden; animation: txt 0.5s 1; animation-delay: 0.5s;animation-fill-mode: forwards; text-align: center;}
+.page_1 .main_msg .main_txt h2{font-size: 43px; color: #fff;}
+
+.page_1 .main_msg .btn_box{width: 100%; height: auto; display: flex;}
+.page_1 .main_msg .btn_box a{width: 195px; padding: 20px 0; border: 1px solid #fff; color: #fff; position: relative;overflow: hidden;font-weight: bold; text-align: center;z-index: 10;}
+.page_1 .main_msg .btn_box a:after{content: ''; position: absolute; width: 150%; height: 100%; background: #fff; top: 0; left: -350px; z-index: -1;transform: skewX(-45deg); transition: all 0.4s;}
+.page_1 .main_msg .btn_box a:hover:after{left: -50px;}
+.page_1 .main_msg .btn_box a:hover{color: #d72329;}
